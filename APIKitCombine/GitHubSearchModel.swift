@@ -21,6 +21,7 @@ class GitHubSearchModel: ObservableObject {
     // APIキャンセル用インスタンス
     var requestCancellable: Cancellable?
     
+    // テキスト入力に対して遅延を行う
     let didChange = PassthroughSubject<Void, Never>()
     private var cancellable: AnyCancellable?
     
@@ -29,6 +30,7 @@ class GitHubSearchModel: ObservableObject {
         cancellable = didChange
             .debounce(for: 1.0, scheduler: DispatchQueue.main)
             .sink { [weak self] _ in
+                //１秒入力していなかったら、検索処理を行う
                 self?.search()
         }
 
@@ -43,6 +45,7 @@ class GitHubSearchModel: ObservableObject {
 
 private extension GitHubSearchModel {
     
+    /// 検索を行う
     func search() {
         debugPrint("search")
         
