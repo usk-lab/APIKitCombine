@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		A867CCC224C42B7600D27F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A867CCC124C42B7600D27F74 /* Assets.xcassets */; };
 		A867CCC524C42B7600D27F74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A867CCC424C42B7600D27F74 /* Preview Assets.xcassets */; };
 		A867CCC824C42B7600D27F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A867CCC624C42B7600D27F74 /* LaunchScreen.storyboard */; };
+		A867CCD124C42BA600D27F74 /* APIKit in Frameworks */ = {isa = PBXBuildFile; productRef = A867CCD024C42BA600D27F74 /* APIKit */; };
+		A867CCD324C42C2000D27F74 /* APIPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A867CCD224C42C2000D27F74 /* APIPublisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		A867CCC424C42B7600D27F74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A867CCC724C42B7600D27F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A867CCC924C42B7600D27F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A867CCD224C42C2000D27F74 /* APIPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPublisher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A867CCD124C42BA600D27F74 /* APIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 				A867CCBB24C42B7500D27F74 /* AppDelegate.swift */,
 				A867CCBD24C42B7500D27F74 /* SceneDelegate.swift */,
 				A867CCBF24C42B7500D27F74 /* ContentView.swift */,
+				A867CCD224C42C2000D27F74 /* APIPublisher.swift */,
 				A867CCC124C42B7600D27F74 /* Assets.xcassets */,
 				A867CCC624C42B7600D27F74 /* LaunchScreen.storyboard */,
 				A867CCC924C42B7600D27F74 /* Info.plist */,
@@ -91,6 +96,9 @@
 			dependencies = (
 			);
 			name = APIKitCombine;
+			packageProductDependencies = (
+				A867CCD024C42BA600D27F74 /* APIKit */,
+			);
 			productName = APIKitCombine;
 			productReference = A867CCB824C42B7500D27F74 /* APIKitCombine.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +127,9 @@
 				Base,
 			);
 			mainGroup = A867CCAF24C42B7500D27F74;
+			packageReferences = (
+				A867CCCF24C42BA600D27F74 /* XCRemoteSwiftPackageReference "APIKit" */,
+			);
 			productRefGroup = A867CCB924C42B7500D27F74 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A867CCBC24C42B7500D27F74 /* AppDelegate.swift in Sources */,
+				A867CCD324C42C2000D27F74 /* APIPublisher.swift in Sources */,
 				A867CCBE24C42B7500D27F74 /* SceneDelegate.swift in Sources */,
 				A867CCC024C42B7500D27F74 /* ContentView.swift in Sources */,
 			);
@@ -340,6 +352,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A867CCCF24C42BA600D27F74 /* XCRemoteSwiftPackageReference "APIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ishkawa/APIKit/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A867CCD024C42BA600D27F74 /* APIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A867CCCF24C42BA600D27F74 /* XCRemoteSwiftPackageReference "APIKit" */;
+			productName = APIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A867CCB024C42B7500D27F74 /* Project object */;
 }
