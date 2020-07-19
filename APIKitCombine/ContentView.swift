@@ -7,10 +7,28 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
+    
+    @ObservedObject var model: GitHubSearchModel = .init()
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            VStack {
+                TextField("text to search", text: $model.searchText)
+                    .padding()
+                Divider()
+                List (model.items, id: \.fullName) { item in
+                    Text(item.fullName)
+                }
+            }.onDisappear {
+                // 破棄される際に通信をキャンセルする
+                self.model.cancel()
+            }
+            .navigationBarTitle("検索", displayMode: .inline)
+        }
+        
     }
 }
 
