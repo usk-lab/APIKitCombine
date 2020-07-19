@@ -22,6 +22,8 @@
 		A8A6989C24C4356800C80573 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6989B24C4356800C80573 /* SearchResponse.swift */; };
 		A8A6989E24C4361200C80573 /* GitHubDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6989D24C4361200C80573 /* GitHubDecoder.swift */; };
 		A8A698A224C4377300C80573 /* GitHubSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A698A124C4377300C80573 /* GitHubSearchModel.swift */; };
+		A8A698A524C4488200C80573 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A8A698A324C4488200C80573 /* README.md */; };
+		A8A698A624C4488200C80573 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A8A698A424C4488200C80573 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		A8A6989B24C4356800C80573 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		A8A6989D24C4361200C80573 /* GitHubDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubDecoder.swift; sourceTree = "<group>"; };
 		A8A698A124C4377300C80573 /* GitHubSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchModel.swift; sourceTree = "<group>"; };
+		A8A698A324C4488200C80573 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A8A698A424C4488200C80573 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		A867CCAF24C42B7500D27F74 = {
 			isa = PBXGroup;
 			children = (
+				A8A698A424C4488200C80573 /* LICENSE */,
+				A8A698A324C4488200C80573 /* README.md */,
 				A867CCBA24C42B7500D27F74 /* APIKitCombine */,
 				A867CCB924C42B7500D27F74 /* Products */,
 			);
@@ -199,7 +205,9 @@
 			files = (
 				A867CCC824C42B7600D27F74 /* LaunchScreen.storyboard in Resources */,
 				A867CCC524C42B7600D27F74 /* Preview Assets.xcassets in Resources */,
+				A8A698A524C4488200C80573 /* README.md in Resources */,
 				A867CCC224C42B7600D27F74 /* Assets.xcassets in Resources */,
+				A8A698A624C4488200C80573 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
