@@ -25,6 +25,14 @@ extension GitHubRequestProtocol {
         return params
     }
     
+    #if DEBUG
+    func intercept(urlRequest: URLRequest) throws -> URLRequest {
+        debugPrint(urlRequest.url?.absoluteString ?? "")        
+        return urlRequest
+    }
+    
+    #endif
+    
 }
 
 extension GitHubRequestProtocol where Response: Decodable {
