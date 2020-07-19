@@ -69,7 +69,7 @@
 				A867CCBB24C42B7500D27F74 /* AppDelegate.swift */,
 				A867CCBD24C42B7500D27F74 /* SceneDelegate.swift */,
 				A867CCBF24C42B7500D27F74 /* ContentView.swift */,
-				A8A6989424C4340100C80573 /* GithubAPI */,
+				A8A6989524C4344100C80573 /* API */,
 				A867CCC124C42B7600D27F74 /* Assets.xcassets */,
 				A867CCC624C42B7600D27F74 /* LaunchScreen.storyboard */,
 				A867CCC924C42B7600D27F74 /* Info.plist */,
@@ -86,15 +86,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		A8A6989424C4340100C80573 /* GithubAPI */ = {
+		A8A6989524C4344100C80573 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A8A6989724C4345F00C80573 /* GitHub */,
+				A8A6989624C4344A00C80573 /* Base */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A8A6989624C4344A00C80573 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				A867CCD224C42C2000D27F74 /* APIPublisher.swift */,
 				A867CCD424C42E1B00D27F74 /* Request+.swift */,
-				A867CCD624C42EAD00D27F74 /* GitHubRequestProtocol.swift */,
 				A867CCD824C4333E00D27F74 /* APIDataParser.swift */,
 			);
-			path = GithubAPI;
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A8A6989724C4345F00C80573 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				A867CCD624C42EAD00D27F74 /* GitHubRequestProtocol.swift */,
+			);
+			path = GitHub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
