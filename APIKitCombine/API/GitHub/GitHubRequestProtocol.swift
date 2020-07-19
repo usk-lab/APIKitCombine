@@ -21,6 +21,7 @@ extension GitHubRequestProtocol {
         return URL(string: "https://api.github.com")!
     }
     
+    //APIパラメーター
     var parameters: Any? {
         return params
     }

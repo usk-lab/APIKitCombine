@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// 検索結果Response
 struct SearchResponse: Decodable {
     let items: [SearchItem]
 }

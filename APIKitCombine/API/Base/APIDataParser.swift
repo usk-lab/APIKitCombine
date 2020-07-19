@@ -9,9 +9,10 @@
 import Foundation
 import APIKit
 
+/// Decodableに準拠するデータをデコードする
 struct APIDataParser<T: Decodable>: APIKit.DataParser {
     
-    let decoder: JSONDecoder
+    let decoder: JSONDecoder //デコーダー
     
     var contentType: String? {
         return "application/json"

@@ -10,6 +10,7 @@ import Foundation
 import Combine
 import APIKit
 
+/// 検索モデル
 class GitHubSearchModel: ObservableObject {
         
     @Published var items: [SearchItem] = [] //検索結果

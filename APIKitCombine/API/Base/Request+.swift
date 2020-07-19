@@ -9,6 +9,7 @@
 import Foundation
 import APIKit
 
+/// Publisherを生やす
 extension APIKit.Request where Self.Response: Decodable {
     
     var publisher: APIPublisher<Self> {
