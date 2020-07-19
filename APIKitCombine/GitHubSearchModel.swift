@@ -15,11 +15,24 @@ class GitHubSearchModel: ObservableObject {
     @Published var items: [SearchItem] = [] //検索結果
     
     var searchText: String = "" {
-        didSet { self.search() }
+        didSet { didChange.send(()) }
     }
     
     // APIキャンセル用インスタンス
     var requestCancellable: Cancellable?
+    
+    let didChange = PassthroughSubject<Void, Never>()
+    private var cancellable: AnyCancellable?
+    
+    init() {
+        
+        cancellable = didChange
+            .debounce(for: 1.0, scheduler: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.search()
+        }
+
+    }
     
     func cancel() {
         self.requestCancellable?.cancel()
@@ -31,9 +44,11 @@ class GitHubSearchModel: ObservableObject {
 private extension GitHubSearchModel {
     
     func search() {
+        debugPrint("search")
         
         let request = GitHubRepository.SearchRepositories(query: searchText)
-        self.requestCancellable = request.publisher.receive(on: DispatchQueue.main)
+        self.requestCancellable = request.publisher
+            .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { result in
                 switch result {
                  case .finished:
