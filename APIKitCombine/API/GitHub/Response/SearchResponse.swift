@@ -12,6 +12,7 @@ struct SearchResponse: Decodable {
     let items: [SearchItem]
 }
 
-struct SearchItem: Decodable {
+struct SearchItem: Decodable, Identifiable {
+    let id: Int
     let fullName: String
 }

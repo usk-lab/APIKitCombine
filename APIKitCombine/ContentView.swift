@@ -19,7 +19,7 @@ struct ContentView: View {
                 TextField("text to search", text: $model.searchText)
                     .padding()
                 Divider()
-                List (model.items, id: \.fullName) { item in
+                List (model.items) { item in
                     Text(item.fullName)
                 }
             }.onDisappear {
