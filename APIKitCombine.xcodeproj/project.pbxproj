@@ -15,6 +15,9 @@
 		A867CCC824C42B7600D27F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A867CCC624C42B7600D27F74 /* LaunchScreen.storyboard */; };
 		A867CCD124C42BA600D27F74 /* APIKit in Frameworks */ = {isa = PBXBuildFile; productRef = A867CCD024C42BA600D27F74 /* APIKit */; };
 		A867CCD324C42C2000D27F74 /* APIPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A867CCD224C42C2000D27F74 /* APIPublisher.swift */; };
+		A867CCD524C42E1B00D27F74 /* Request+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A867CCD424C42E1B00D27F74 /* Request+.swift */; };
+		A867CCD724C42EAD00D27F74 /* GitHubRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A867CCD624C42EAD00D27F74 /* GitHubRequestProtocol.swift */; };
+		A867CCD924C4333E00D27F74 /* APIDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A867CCD824C4333E00D27F74 /* APIDataParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		A867CCC724C42B7600D27F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A867CCC924C42B7600D27F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A867CCD224C42C2000D27F74 /* APIPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPublisher.swift; sourceTree = "<group>"; };
+		A867CCD424C42E1B00D27F74 /* Request+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+.swift"; sourceTree = "<group>"; };
+		A867CCD624C42EAD00D27F74 /* GitHubRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRequestProtocol.swift; sourceTree = "<group>"; };
+		A867CCD824C4333E00D27F74 /* APIDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 				A867CCBD24C42B7500D27F74 /* SceneDelegate.swift */,
 				A867CCBF24C42B7500D27F74 /* ContentView.swift */,
 				A867CCD224C42C2000D27F74 /* APIPublisher.swift */,
+				A867CCD424C42E1B00D27F74 /* Request+.swift */,
+				A867CCD624C42EAD00D27F74 /* GitHubRequestProtocol.swift */,
+				A867CCD824C4333E00D27F74 /* APIDataParser.swift */,
 				A867CCC124C42B7600D27F74 /* Assets.xcassets */,
 				A867CCC624C42B7600D27F74 /* LaunchScreen.storyboard */,
 				A867CCC924C42B7600D27F74 /* Info.plist */,
@@ -160,7 +169,10 @@
 				A867CCBC24C42B7500D27F74 /* AppDelegate.swift in Sources */,
 				A867CCD324C42C2000D27F74 /* APIPublisher.swift in Sources */,
 				A867CCBE24C42B7500D27F74 /* SceneDelegate.swift in Sources */,
+				A867CCD524C42E1B00D27F74 /* Request+.swift in Sources */,
+				A867CCD724C42EAD00D27F74 /* GitHubRequestProtocol.swift in Sources */,
 				A867CCC024C42B7500D27F74 /* ContentView.swift in Sources */,
+				A867CCD924C4333E00D27F74 /* APIDataParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
