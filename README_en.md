@@ -3,11 +3,12 @@
 Sample project for APIKit with Combine
 
 
-## 使用するライブラリ・フレームワーク
+## Library and Frameworks
 - [APIKit](https://github.com/ishkawa/APIKit)
 - Combine
 - SwiftUI
 
-## 開発環境
+## Environment
 - Xcode : 11.6
 - OS : 10.15.6
+
