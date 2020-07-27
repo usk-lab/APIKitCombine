@@ -13,7 +13,7 @@ class GitHubDecoder: JSONDecoder {
     
     override init() {
         super.init()
-        self.keyDecodingStrategy = .convertFromSnakeCase
+        self.keyDecodingStrategy = .convertFromSnakeCase //snake_case -> CamelCase
     }
     
 }

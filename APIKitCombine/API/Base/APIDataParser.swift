@@ -15,7 +15,7 @@ struct APIDataParser<T: Decodable>: APIKit.DataParser {
     let decoder: JSONDecoder //デコーダー
     
     var contentType: String? {
-        return "application/json"
+        return "application/json" //レスポンスはJSON形式
     }
 
     func parse(data: Data) throws -> Any {

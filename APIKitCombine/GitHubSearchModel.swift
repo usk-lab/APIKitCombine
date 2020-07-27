@@ -50,7 +50,10 @@ private extension GitHubSearchModel {
     func search() {
         debugPrint("search")
         
+        //APIリクエストを作成
         let request = GitHubRepository.SearchRepositories(query: searchText)
+        
+        //CombineのPublisherを作成し、通信処理を行う
         self.requestCancellable = request.publisher
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { result in

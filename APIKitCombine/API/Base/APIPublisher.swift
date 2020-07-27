@@ -19,7 +19,8 @@ struct APIPublisher<R: APIKit.Request>: Publisher where R.Response: Decodable {
     let callbackQueue: CallbackQueue = .main //通信処理のCallbackで呼ばれるスレッド
 
     func receive<S>(subscriber: S) where S : Subscriber, Failure == S.Failure, Output == S.Input {
-        // 通信処理
+        
+        // 通信処理を行う
         let task = Session.send(request, callbackQueue: callbackQueue) { result in
             switch result {
             case .success(let res):
