@@ -54,20 +54,23 @@ private extension GitHubSearchModel {
         let request = GitHubRepository.SearchRepositories(query: searchText)
         
         //CombineのPublisherを作成し、通信処理を行う
-        self.requestCancellable = request.publisher
-            .receive(on: DispatchQueue.main)
+        self.requestCancellable = request.publisher //Publisherに変換
+            .receive(on: DispatchQueue.main) //メインスレッドで受け取る
             .sink(receiveCompletion: { result in
                 switch result {
-                 case .finished:
+                 case .finished: //完了した
                     debugPrint("request finished")
                     break
-                 case .failure(let error):
+                 case .failure(let error): //失敗した
                     debugPrint("request failed : \(error)")
                     break
                  }
             }, receiveValue: { [weak self] response in
+                //結果をitemsに保存
                 self?.items = response.items
             })
+        
+        // => itemsの更新はCombineを通して通知される
         
     }
         
