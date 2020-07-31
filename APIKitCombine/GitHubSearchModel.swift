@@ -50,11 +50,11 @@ private extension GitHubSearchModel {
     func search() {
         debugPrint("search")
         
-        //APIリクエストを作成
+        // 1)APIリクエストを作成
         let request = GitHubRepository.SearchRepositories(query: searchText)
         
-        //CombineのPublisherを作成し、通信処理を行う
-        self.requestCancellable = request.publisher //Publisherに変換
+        // 2)CombineのPublisherを作成し、通信処理を行う
+        self.requestCancellable = request.publisher //Publisherに変換（この時点で通信処理を行なっている）
             .receive(on: DispatchQueue.main) //メインスレッドで受け取る
             .sink(receiveCompletion: { result in
                 switch result {
@@ -66,11 +66,11 @@ private extension GitHubSearchModel {
                     break
                  }
             }, receiveValue: { [weak self] response in
-                //結果をitemsに保存
+                // 3)結果をitemsに保存
                 self?.items = response.items
             })
         
-        // => itemsの更新はCombineを通して通知される
+        // 4)itemsの更新はCombineを通して通知される
         
     }
         
